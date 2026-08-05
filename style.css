@@ -1,61 +1,87 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    box-sizing: border-box;
+    font-family: "Georgia", serif;
 }
 
-body{
-
-    font-family:Arial, Helvetica, sans-serif;
-
-    background:#f4f6fb;
-
-    min-height:100vh;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
+body {
+    margin: 0;
+    background: #f8f1e8;
+    color: #4f4a42;
 }
 
-h1{
 
-    color:#6d5efc;
-
-    margin-bottom:20px;
-
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background: #f7d9df;
+    border-bottom: 3px solid #d8c7a8;
 }
 
-p{
-
-    margin-bottom:25px;
-
-    color:#666;
-
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: #6b5b4d;
 }
 
-button{
-
-    background:#6d5efc;
-
-    color:white;
-
-    border:none;
-
-    padding:14px 28px;
-
-    border-radius:12px;
-
-    cursor:pointer;
-
-    font-size:16px;
-
+header p {
+    font-size: 1.1rem;
+    color: #75695c;
 }
 
-button:hover{
 
-    background:#5948f0;
-
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    display: grid;
+    gap: 25px;
 }
+
+
+.card {
+    background: #fffaf3;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(120, 100, 80, 0.12);
+    border-left: 8px solid #b7c9a8;
+}
+
+
+.card h2 {
+    color: #7b6670;
+}
+
+
+.welcome {
+    border-left: 8px solid #e8aeb7;
+}
+
+
+.box {
+    background: #f1eadf;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+
+.grades p {
+    background: #e8f0df;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+
+ul {
+    line-height: 2;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #dfe8d5;
+    margin-top: 40px;
+    color: #5f6858;
+}
+
+
