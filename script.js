@@ -78,3 +78,51 @@ addGradeButton.addEventListener("click", () => {
     document.getElementById("subjectName").value = "";
     document.getElementById("gradeValue").value = "";
 });
+// 🌸 Study Timer
+
+let timeLeft = 25 * 60;
+let timer;
+
+const timerDisplay = document.getElementById("timerDisplay");
+const startTimer = document.getElementById("startTimer");
+const resetTimer = document.getElementById("resetTimer");
+
+function updateTimer() {
+    const minutes = Math.floor(timeLeft / 60);
+    const seconds = timeLeft % 60;
+
+    timerDisplay.textContent =
+        `${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+}
+
+startTimer.addEventListener("click", () => {
+
+    if (timer) return;
+
+    timer = setInterval(() => {
+
+        if (timeLeft > 0) {
+            timeLeft--;
+            updateTimer();
+        } else {
+            clearInterval(timer);
+            timer = null;
+            alert("🎉 Great job! Time for a break!");
+        }
+
+    }, 1000);
+
+});
+
+resetTimer.addEventListener("click", () => {
+
+    clearInterval(timer);
+    timer = null;
+
+    timeLeft = 25 * 60;
+
+    updateTimer();
+
+});
+
+updateTimer();
