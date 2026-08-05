@@ -1,5 +1,5 @@
+alert("Script file loaded! 🎉");
+
 document.getElementById("testButton").addEventListener("click", () => {
-
-    alert("JavaScript is connected! 🎉");
-
+    alert("Button works! 🎓");
 });
