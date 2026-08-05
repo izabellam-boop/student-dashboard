@@ -1,3 +1,4 @@
+alert("Script is running 🌸");
 console.log("Bella's Student Dashboard is loaded 🌸");
 
 
