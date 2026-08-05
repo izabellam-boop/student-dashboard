@@ -1,5 +1,14 @@
-alert("Script file loaded! 🎉");
+console.log("Bella's Student Dashboard is loaded 🌸");
 
-document.getElementById("testButton").addEventListener("click", () => {
-    alert("Button works! 🎓");
+const cards = document.querySelectorAll(".card");
+
+cards.forEach(card => {
+    card.addEventListener("mouseenter", () => {
+        card.style.transform = "translateY(-5px)";
+        card.style.transition = "0.3s";
+    });
+
+    card.addEventListener("mouseleave", () => {
+        card.style.transform = "translateY(0)";
+    });
 });
