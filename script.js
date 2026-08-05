@@ -45,3 +45,36 @@ addButton.addEventListener("click", () => {
     });
 
 });
+// 🌸 Grade Tracker
+
+const addGradeButton = document.getElementById("addGrade");
+const gradeList = document.getElementById("gradeList");
+const averageGrade = document.getElementById("averageGrade");
+
+let grades = [];
+
+addGradeButton.addEventListener("click", () => {
+
+    const subject = document.getElementById("subjectName").value;
+    const grade = Number(document.getElementById("gradeValue").value);
+
+    if (subject === "" || isNaN(grade)) {
+        alert("Please enter both a class and a grade! 🌸");
+        return;
+    }
+
+    grades.push(grade);
+
+    const item = document.createElement("p");
+    item.textContent = `📚 ${subject} — ${grade}%`;
+
+    gradeList.appendChild(item);
+
+    const total = grades.reduce((sum, value) => sum + value, 0);
+    const average = (total / grades.length).toFixed(1);
+
+    averageGrade.textContent = `Current Average: ${average}%`;
+
+    document.getElementById("subjectName").value = "";
+    document.getElementById("gradeValue").value = "";
+});
